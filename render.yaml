@@ -2,7 +2,7 @@ services:
   - type: web
     name: pet-market-web
     env: node
-    repo: https://github.com/yourusername/your-repo-name
+    repo: https://github.com/EdricHii/Pet-Market.git
     branch: main
     buildCommand: cd apps/pet-market-web && npm install && npm run build
     startCommand: cd apps/pet-market-web && npm run serve
