@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: pet-market-web
+    env: node
+    repo: https://github.com/yourusername/your-repo-name
+    branch: main
+    buildCommand: cd apps/pet-market-web && npm install && npm run build
+    startCommand: cd apps/pet-market-web && npm run serve
+    envVars:
+      - key: NODE_ENV
+        value: production
+    plan: starter
