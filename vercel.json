@@ -1,0 +1,18 @@
+{
+    "builds": [
+        {
+            "src": "apps/pet-market-web/src/main.server.ts",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "apps/pet-market-web/dist/**",
+            "use": "@vercel/static"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "apps/pet-market-web/src/main.server.ts"
+        }
+    ]
+}
