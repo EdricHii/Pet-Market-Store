@@ -4,8 +4,20 @@ services:
     env: node
     repo: https://github.com/EdricHii/Pet-Market.git
     branch: main
-    buildCommand: cd apps/pet-market-web && npm install && npm run build
-    startCommand: cd apps/pet-market-web && npm run serve
+    buildCommand: npm install && npx nx build pet-market-web
+    startCommand: npx nx serve pet-market-web --configuration=production
+    envVars:
+      - key: NODE_ENV
+        value: production
+    plan: starter
+
+  - type: web
+    name: pet-market-be
+    env: node
+    repo: https://github.com/EdricHii/Pet-Market.git
+    branch: main
+    buildCommand: npm install && cd apps/pet-market-be && npx prisma generate && cd ../.. && npx nx build pet-market-be
+    startCommand: npx nx serve pet-market-be --configuration=production
     envVars:
       - key: NODE_ENV
         value: production
