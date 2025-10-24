@@ -13,6 +13,7 @@ import { OrdersModule } from './orders/orders.module';
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'dist/schema.gql'),
+      useGlobalPrefix: true,
     }),
     ProductsModule,
     CheckoutModule,
@@ -21,4 +22,4 @@ import { OrdersModule } from './orders/orders.module';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
