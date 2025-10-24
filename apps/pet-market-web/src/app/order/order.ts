@@ -4,11 +4,11 @@ import { OrderDetail } from '../components/order-detail/order-detail';
 import { CommonModule } from '@angular/common';
 import { pipe, switchMap } from 'rxjs';
 import { rxMethod } from '@ngrx/signals/rxjs-interop';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-order',
-  imports: [CommonModule, OrderDetail],
+  imports: [CommonModule, OrderDetail, RouterLink],
   templateUrl: './order.html',
   styleUrl: './order.scss',
 })
