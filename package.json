@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "build:be": "npx nx build pet-market-be",
-    "start:be": "npx prisma generate --schema=apps/pet-market-be/prisma/schema.prisma && npx nx build pet-market-be && node dist/apps/pet-market-be/main.js",
+    "start:be": "npx prisma generate --schema=apps/pet-market-be/prisma/schema.prisma && npx nx build pet-market-be && node apps/pet-market-be/dist/main.js",
     "build:web": "npx nx build pet-market-web",
     "start:web": "npx nx build pet-market-web && node dist/apps/pet-market-web/server/main.js"
   },
