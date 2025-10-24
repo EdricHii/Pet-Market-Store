@@ -11,7 +11,7 @@ import 'dotenv/config';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: ['https://pet-market-production.up.railway.app'], // Replace with your actual Vercel frontend URL
+    origin: ['https://pet-market-store.vercel.app'], // Replace with your actual Vercel frontend URL
     credentials: true,
   });
   const globalPrefix = 'api';
