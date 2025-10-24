@@ -1,6 +1,7 @@
 /// <reference types="@ngx-env/builder" />
 
 interface ImportMetaEnv {
+  readonly NG_APP_API_URL: string;
   readonly NG_APP_FIREBASE_API_KEY: string;
   readonly NG_APP_FIREBASE_AUTH_DOMAIN: string;
   readonly NG_APP_FIREBASE_PROJECT_ID: string;

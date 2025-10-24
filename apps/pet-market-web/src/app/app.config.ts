@@ -25,7 +25,7 @@ export const appConfig: ApplicationConfig = {
       const httpLink = inject(HttpLink);
       return {
         cache: new InMemoryCache(),
-        link: httpLink.create({ uri: 'http://localhost:3000/graphql' }), // Change to your GraphQL endpoint
+        link: httpLink.create({ uri: environment.graphqlUrl }),
       };
     }),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
