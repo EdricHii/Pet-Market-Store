@@ -1,6 +1,5 @@
 export const environment = {
-    apiUrl: import.meta.env.NG_APP_API_URL || 'http://localhost:3000',
-    graphqlUrl: import.meta.env.NG_APP_API_URL ? `${import.meta.env.NG_APP_API_URL}/graphql` : 'http://localhost:3000/graphql',
+    apiUrl: 'http://localhost:3000',
     production: false,
     firebase: {
         apiKey: import.meta.env.NG_APP_FIREBASE_API_KEY,
