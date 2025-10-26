@@ -19,7 +19,8 @@ import { initializeApp, provideFirebaseApp } from "@angular/fire/app";
 import { provideAuth, getAuth } from "@angular/fire/auth";
 import { environment } from "./environments/environment";
 
-export const appConfig: ApplicationConfig = {
+export const appConfig: ApplicationConfig = {  providers: [
+    pr
   providers: [
     provideApollo(() => {
       const httpLink = inject(HttpLink);
@@ -28,8 +29,7 @@ export const appConfig: ApplicationConfig = {
         link: httpLink.create({ uri: `${environment.apiUrl}/api/graphql` }),
       };
     }),
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),h()),
     provideClientHydration(withEventReplay(), withIncrementalHydration()),
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
