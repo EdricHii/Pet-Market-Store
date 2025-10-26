@@ -1,5 +1,5 @@
 export const environment = {
-    apiUrl: 'https://pet-market-production.up.railway.app',
+    apiUrl: 'https://pet-market-store-production.up.railway.app',
     production: true,
     firebase: {
         apiKey: import.meta.env.NG_APP_FIREBASE_API_KEY,
