@@ -25,7 +25,7 @@ export const appConfig: ApplicationConfig = {
       const httpLink = inject(HttpLink);
       return {
         cache: new InMemoryCache(),
-        link: httpLink.create({ uri: environment.graphqlUrl }),
+        link: httpLink.create({ uri: `${environment.apiUrl}/api/graphql` }),
       };
     }),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
